@@ -1,0 +1,5 @@
+Hice las 2 vistas de cabañas.
+Agregue 1 dependencias NPM que necesitaba :
+Boostrap
+Necesitan eliminar los CSS de ejemplo por que están interfiriendo en el diseño de las vistas. para probar las vistas deben incluirlas en APP solo deje los archivos Pages
+

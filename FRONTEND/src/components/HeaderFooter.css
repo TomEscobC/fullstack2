@@ -1,0 +1,38 @@
+/* styles.css */
+body, html, #root, .app-container { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+  }
+  
+  .main-content {
+    flex: 1; 
+  }
+  
+  .header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 10px;
+
+  }
+  
+  .header img {
+    width: 150px;
+    height: 100px;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: 10px; /* Add some padding to the footer */
+  }

@@ -1,0 +1,34 @@
+.content-estado {
+  margin-top: 110px; /* Espacio debajo del header */
+  margin-left: 250px; /* Espacio para el sidebar */
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 70px); /* Altura mínima dinámica */
+  overflow-y: auto;
+}
+/* Estilos personalizados para colores de las tarjetas */
+.card.disponible {
+  background-color: #d4edda; /* Verde claro */
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+.card.ocupado {
+  background-color: #f8d7da; /* Rojo claro */
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+.card.pendiente {
+  background-color: #fff3cd; /* Amarillo claro */
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+.card {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+.card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Agrega sombra más pronunciada */
+}
