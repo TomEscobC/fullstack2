@@ -325,18 +325,35 @@ function AñadirReservas() {
       {/* Selección de Cabaña */}
       <label htmlFor="habitacion" className="añadir-reserva-label">Seleccionar Cabaña:</label>
       <select
-        id="habitacion"
-        name="habitacion"
-        className="añadir-reserva-select"
-        value={habitacionSeleccionada}
-        onChange={(e) => setHabitacionSeleccionada(e.target.value)}
-        required
-      >
-        <option value="">Seleccione una cabaña</option>
-        {habitaciones.map((cabaña) => (
-          <option key={cabaña._id} value={cabaña._id}>{cabaña.number}</option>
-        ))}
-      </select>
+  id="habitacion"
+  name="habitacion"
+  className="añadir-reserva-select"
+  value={habitacionSeleccionada}
+  onChange={(e) => setHabitacionSeleccionada(e.target.value)}
+  required
+>
+  <option value="">Seleccione una cabaña</option>
+  {habitaciones
+    .slice() // Clonamos el array para no modificar el original
+    .sort((a, b) => {
+      const tipoA = a.number.replace(/[0-9]/g, ""); // Extraer el texto (ej. "suite", "tinycabin")
+      const tipoB = b.number.replace(/[0-9]/g, "");
+
+      const numA = parseInt(a.number.match(/\d+/)?.[0]) || 0; // Extraer el número
+      const numB = parseInt(b.number.match(/\d+/)?.[0]) || 0;
+
+      if (tipoA === tipoB) {
+        return numA - numB; // Si son del mismo tipo, ordenar por número
+      }
+      return tipoA.localeCompare(tipoB); // Ordenar alfabéticamente por tipo
+    })
+    .map((cabaña) => (
+      <option key={cabaña._id} value={cabaña._id}>
+        {cabaña.number}
+      </option>
+    ))}
+</select>
+
 
       {/* Fechas */}
       <label htmlFor="fecha_entrada" className="añadir-reserva-label">Fecha de Entrada:</label>

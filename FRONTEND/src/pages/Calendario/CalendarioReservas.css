@@ -1,0 +1,214 @@
+/* Contenedor del calendario */
+.calendario-container {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  /* Contenedor principal */
+.calendario-reserva-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 70px);
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+  
+  /* Tabla del calendario */
+  .calendario-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Encabezados */
+  .calendario-tabla th {
+    background-color: #333;
+    color: white;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Celdas del calendario */
+  .calendario-tabla td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    min-width: 40px;
+    cursor: pointer;
+  }
+  
+  /* Estilo de la columna de cabañas */
+  .cabaña-nombre {
+    font-weight: bold;
+    background-color: #f4f4f4;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  /* Colores de las reservas */
+  .check-in {
+    background-color: orange; /* 🟧 Check-in */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .check-out {
+    background-color: red; /* 🟥 Check-out */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .reserva-activa {
+    background-color: green; /* 🟩 Días ocupados */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Estilo del modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .modal-content p {
+    margin: 8px 0;
+  }
+  
+  .modal-content button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background: #555;
+  }
+  /* Contenedor del calendario */
+  .calendario-container {
+    overflow-x: auto;
+  }
+  
+  /* Estilo de la tabla */
+  .calendario-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  /* Cabecera de la tabla */
+  .calendario-tabla thead th {
+    background-color: #333;
+    color: white;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Celda de nombre de cabaña */
+  .cabaña-nombre {
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+  }
+  
+  /* Celdas del calendario */
+  .calendario-tabla td {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Colores para las reservas */
+  /* Check-in (Naranja) */
+  .reserva-inicio {
+    background-color: #f39c12 !important; /* Naranja */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Check-out (Rojo) */
+  .reserva-fin {
+    background-color: #e74c3c !important; /* Rojo */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Días con reserva activa (Verde) */
+  .reserva-ocupada {
+    background-color: #2ecc71 !important; /* Verde */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Modal de detalles de reserva */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: left;
+  }
+  
+  .modal-content h3 {
+    margin-top: 0;
+  }
+  
+  .modal-content p {
+    margin: 5px 0;
+  }
+  
+  .modal button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .modal button:hover {
+    background: #c0392b;
+  }
+  
