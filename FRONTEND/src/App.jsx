@@ -50,7 +50,7 @@ function App() {
         {/* Rutas protegidas */}
         <Route path="/reportes" element={
           <ProtectedRoute>
-            <Header />
+            
             <BarraLateral />
             <Reportes />
             <Footer />

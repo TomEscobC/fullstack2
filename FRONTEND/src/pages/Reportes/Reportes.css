@@ -1,76 +1,148 @@
-/* Reportes.css */
-.reportes-container {
-    margin-top: 110px; /* Espacio debajo del header */
-    margin-left: 250px; /* Espacio para el sidebar */
-    padding: 20px;
-    background-color: #f8f9fa;
-    min-height: calc(100vh - 70px); /* Altura mínima dinámica */
-    overflow-y: auto;
+/* --- Estilos Generales --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+}
+
+/* --- Contenedor Principal --- */
+.dashboard-container {
+  margin-top: 110px; /* Espacio debajo del header */
+  margin-left: 500px; /* Asegura que el contenido no quede debajo del sidebar */
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  overflow-y: auto;
+/* Transición suave si el sidebar es colapsable */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .dashboard-container {
+      margin-left: 0; /* Elimina el margen cuando el sidebar es oculto en móviles */
   }
-  
-  .titulo {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+}
+
+
+/* --- Encabezados y Títulos --- */
+.titulo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* --- Botón Generar Reporte --- */
+.boton-generar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.boton-generar button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+.boton-generar button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Gráficos y Secciones del Dashboard --- */
+.graficos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.dashboard-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 250px;
+}
+
+/* --- Tablas --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* --- Estilos de la App --- */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
-  
-  .boton-generar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .boton-generar button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .boton-generar button:hover {
-    background-color: #0056b3;
-  }
-  
-  .graficos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  .dashboard-section {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  .chart-container {
-    width: 100%;
-    height: 250px;
-  }
-  
-  .tabla-reservas {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-  }
-  
-  .tabla-reservas th, .tabla-reservas td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-  
-  .tabla-reservas th {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  
+}
