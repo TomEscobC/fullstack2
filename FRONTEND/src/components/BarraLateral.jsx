@@ -26,6 +26,7 @@ const Sidebar = () => {
             <ul className="submenu">
               <li><Link className="nav-link" to="/añadir-reservas">Nueva Reserva</Link></li>
               <li><Link className="nav-link" to="/lista-reservas">Lista Reservas</Link></li>
+              <li><Link className="nav-link" to="/calendario-reservas">Calendario Reservas</Link></li>
             </ul>
           )}
         </li>

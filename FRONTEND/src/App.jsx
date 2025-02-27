@@ -9,6 +9,7 @@ import ListaReservas from "./pages/Reservas/ListaReservas";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Reportes from "./pages/Reportes/Reportes";
+import CalendarioReservas from "./pages/Calendario/CalendarioReservas";
 
 // Componente para rutas protegidas
 function ProtectedRoute({ children }) {
@@ -88,6 +89,14 @@ function App() {
             <Header />
             <BarraLateral />
             <ListaReservas />
+            <Footer />
+          </ProtectedRoute>
+        } />
+          <Route path="/calendario-reservas" element={
+          <ProtectedRoute>
+            <Header />
+            <BarraLateral />
+            <CalendarioReservas />
             <Footer />
           </ProtectedRoute>
         } />

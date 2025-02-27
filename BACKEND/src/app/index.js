@@ -13,10 +13,10 @@ const cabinRoutes = require("../routes/cabinRoutes");
 const reservationRoutes = require("../routes/reservationRoutes");
 const registerRoutes = require("../routes/registerRoutes");
 const loginRoutes = require("../controllers/loginController");
-
 const reportsRoutes = require('../routes/reportRoutes');
 
-const calendarRoutes = require("./routes/calendarRoutes"); 
+
+
 
 
 const app = express();
@@ -80,9 +80,10 @@ app.use("/api/cabins", cabinRoutes);  // Ruta para cabañas
 app.use("/api/reservations", reservationRoutes);  // Ruta para reservas
 app.use("/api/register", registerRoutes); // Ruta para crear usuarios
 
+
 app.use("/api/reports", reportsRoutes);
 
-app.use("/api/calendar", calendarRoutes); // Ruta para calendario
+
 
 
 // Iniciar el servidor
