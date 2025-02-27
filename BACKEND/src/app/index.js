@@ -13,6 +13,7 @@ const cabinRoutes = require("../routes/cabinRoutes");
 const reservationRoutes = require("../routes/reservationRoutes");
 const registerRoutes = require("../routes/registerRoutes");
 const loginRoutes = require("../controllers/loginController");
+const reportsRoutes = require('../routes/reportRoutes');
 
 const app = express();
 
@@ -74,6 +75,7 @@ app.use("/api/clients", clientRoutes);  // Ruta para clientes
 app.use("/api/cabins", cabinRoutes);  // Ruta para cabañas
 app.use("/api/reservations", reservationRoutes);  // Ruta para reservas
 app.use("/api/register", registerRoutes); // Ruta para crear usuarios
+app.use("/api/reports", reportsRoutes);
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
